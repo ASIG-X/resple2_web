@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="{{description}}">
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:url" content="" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/front.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/front.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="RESPLE2">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>{{title}}</title>
+  <link rel="icon" type="image/x-icon" href="static/images/ASIG.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Source+Sans+3:wght@400&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <!-- Replace local Font Awesome with CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css?v={{css_version}}">
+
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <!-- Remove local Font Awesome JS -->
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js?v={{js_version}}" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="top-nav" aria-label="Main navigation">
+      <div class="nav-identity">
+        <a class="nav-lab" href="https://asig-x.github.io/" aria-label="ASIG Lab">
+          <img src="static/images/asig_logo.png" alt="" width="36" height="36">
+          <span>ASIG Lab</span>
+        </a>
+        <a class="nav-partner nav-partner-rsl" href="https://rsl.ethz.ch/" aria-label="Robotic Systems Lab (RSL), ETH Zürich" title="Robotic Systems Lab, ETH Zürich">
+          <img src="static/images/rsl.png" alt="RSL" width="672" height="266">
+        </a>
+        <a class="nav-partner nav-partner-climb" href="https://climb.mie.utoronto.ca/" aria-label="CLIMB Lab, University of Toronto" title="CLIMB Lab, University of Toronto">
+          <img src="static/images/climb.svg" alt="CLIMB" width="953" height="250">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a class="nav-brand" href="#home">RESPLE2</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a class="nav-link" href="#datasets">Datasets</a>
+        <a class="nav-link" href="#citation">Citation</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <dialog class="nav-drawer" id="mobile-navigation" aria-labelledby="mobile-nav-title">
+    <div class="drawer-heading">
+      <a class="nav-brand" id="mobile-nav-title" href="#home">RESPLE2</a>
+      <button class="nav-close" type="button" aria-label="Close navigation">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="m6 6 12 12M6 18 18 6"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a class="nav-link" href="#datasets">Datasets</a>
+      <a class="nav-link" href="#citation">Citation</a>
+    </nav>
+    <a class="drawer-lab" href="https://asig-x.github.io/">ASIG Lab <span aria-hidden="true">↗</span></a>
+  </dialog>
+
+  {{include:index/01-home.html}}
+
+  <!-- Paper abstract -->
+  {{include:index/03-abstract.html}}
+  <br>
+  {{include:index/04-methodology.html}}
+  <br>
+
+  <div id="datasets">
+    {{include:datasets/02-platform-videos.html}}
+  </div>
+
+  <!-- YouTube video -->
+  {{include:index/06-youtube.html}}
+
+  <!-- Citation -->
+  {{include:index/07-citation.html}}
+  <!-- End citation -->
+
+  <footer class="footer" aria-hidden="true"></footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
